@@ -279,6 +279,29 @@
           }
         }
       }
+    },
+    "social_links": {
+      "type": "array",
+      "maxItems": 12,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "url"
+        ],
+        "properties": {
+          "label": {
+            "$ref": "#/$defs/text",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "url": {
+            "$ref": "#/$defs/url"
+          }
+        }
+      }
     }
   },
   "allOf": [

@@ -50,6 +50,16 @@ export function validateEntry(entry, filename, today = pacificToday()) {
   }
   if (entry.type === 'artist' && entry.mediums.length === 0) errors.push('/mediums artists need at least one confirmed medium');
   if (entry.type !== 'artist' && (entry.space_slugs?.length ?? 0) > 0) errors.push('/space_slugs is only for artist entries');
+  if (entry.social_links) {
+    if (!entry.sources.some(s => s.kind === 'primary' && s.supports.includes('social_links'))) errors.push('/social_links needs primary evidence');
+    const socialURLs = [entry.instagram, ...entry.social_links.map(link => link.url)].filter(Boolean);
+    const normalizedSocialURLs = socialURLs.map(value => {
+      const url = new URL(value);
+      url.pathname = url.pathname.replace(/\/+$/, '');
+      return url.href;
+    });
+    if (new Set(normalizedSocialURLs).size !== normalizedSocialURLs.length) errors.push('/instagram and /social_links must not duplicate a URL');
+  }
   if (entry.profile) {
     if (entry.type !== 'artist') errors.push('/profile is only for artist entries');
     if (entry.profile.updated_at > today) errors.push('/profile/updated_at cannot be in the future');

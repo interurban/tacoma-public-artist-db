@@ -32,6 +32,8 @@ Help a person propose an accurate, small change that James can review in one pas
 
 Artist records may include an optional `profile` for the site's permanent detail page: `biography` is an array of original plain-text paragraphs, `updated_at` is the real editorial revision date, and `selected_work` holds sourced `{title, summary, url, year?}` entries. Add primary evidence supporting `profile.biography`; each work URL must match a primary source supporting `profile.selected_work`. Omit disputed years. Do not add arbitrary word counts, keyword-stuffed copy, fabricated FAQ answers, imagery or HTML. Change `updated_at` for a substantive profile edit, not a source recheck or import. Legacy records without a profile remain valid.
 
+Add social links only when linked from the artist's official site. Prefer `social_links` entries with a clear platform label for new accounts; retain `instagram` for existing records and do not duplicate a URL across those fields. Never guess handles or use a generic platform homepage. A primary source must support `social_links`.
+
 Use two-space JSON indentation and a final newline. Data files live directly under `artists/`. Keep `schema_version: 1`, `slug`, `type` and identifiers stable; propose any type correction explicitly. Use `archived: true` when retiring an entry, keeping its file and slug. Do not demote published entries to draft to hide them.
 
 Run:

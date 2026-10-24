@@ -37,7 +37,8 @@ Use field names where possible. `Tacoma connection` is also a useful claim when 
 
 | Field | Meaning |
 | --- | --- |
-| `website`, `instagram` | Public http(s) URLs. Omit when unconfirmed. |
+| `website`, `instagram` | Public http(s) URLs. `instagram` remains supported for existing records; omit unconfirmed profiles. |
+| `social_links` | Optional array of up to 12 `{label, url}` artist-owned social profiles. Add only links present on the artist's official site, use a clear platform label, and cite primary evidence supporting `social_links`. Do not duplicate a URL in `instagram`. |
 | `other_links` | Array of `{label, url}` public links. Link to a contact page rather than storing contact details. |
 | `short_bio` | Original plain text, at most 300 characters. No HTML, newlines or copied artist statements. |
 | `focus_tags` | Unique controlled terms; an omitted array means no confirmed tags. |
