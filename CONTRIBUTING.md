@@ -54,7 +54,7 @@ The `Validate data` job checks all entries on PRs and `main` pushes. It uses rea
 
 James reviews the sources, rights, neighborhood assignment, address/public-space evidence and any listing permission. Automated checks cannot prove these facts. Only James approves changing `status` from `draft` to `published`. Once published, retirement uses `archived: true`, preserving the identifier and any future URL. Privacy removal is a separate maintainer process, because archiving cannot erase public history.
 
-`CODEOWNERS` requests the review owner. A GitHub ruleset on `main` must separately require pull requests, a code-owner approval and the `Validate data` status. The setup review records whether those settings were applied; a workflow file alone does not block merging. No bot auto-merges are configured.
+`main` branch protection requires an up-to-date `Validate data` check, one approving review, code-owner review and resolved conversations. New commits dismiss stale approvals; force pushes and branch deletion are blocked. `CODEOWNERS` identifies James and takes effect once the foundation PR lands on `main`. The owner retains GitHub's administrator bypass so a single maintainer can handle their own changes; agents must never use that bypass to merge without the owner's explicit authorization. No bot auto-merges are configured. The [setup review](editorial/reviews/2026-10-24-seed-artists.md) records the settings checked on October 24, 2026.
 
 Keep schema, vocabulary and workflow changes separate from ordinary artist updates. New vocabulary terms need a reason and maintainer review. New fields need updated documentation, validation and useful regression tests. Unknown information is a reason to leave a blank, not add a guessed term.
 

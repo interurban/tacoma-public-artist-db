@@ -29,7 +29,7 @@ A separate public data repository, named `tacoma-public-artist-db`, with one JSO
 - `neighborhood` and `visit_policy` are null for both artists. Historic tour participation and public artwork locations cannot establish current studio access or neighborhood. `last_verified` records today's source review, not direct contact or consent.
 - Artist street addresses are excluded entirely; a future confirmed public studio uses a separate space record. No photos, social handles, emails, phone numbers or home locations are added.
 - Eight broad Tacoma areas form an initial vocabulary, rather than attempting to settle every informal district boundary. Neither artist is assigned an area without evidence.
-- Published records require primary evidence and maintainer permission review. CI validates structure and history, while branch protection enforces review only if the GitHub ruleset was successfully configured.
+- Published records require primary evidence and maintainer permission review. CI validates structure and history; separate GitHub branch protection requires review and passing checks, with the owner retaining administrator bypass.
 
 ## Left out
 
@@ -49,3 +49,10 @@ A separate public data repository, named `tacoma-public-artist-db`, with one JSO
 - The first local schema compile exposed Ajv strict-mode requirements; explicit string types and conditional address-property definitions resolved them. The final suite above passed. Network downloads and Node child-process checks required running outside the local sandbox; no access token was printed or committed.
 
 No website Workers Builds check is expected: this is a standalone data repository using its own GitHub Actions workflow. There is no site build or website deployment to verify.
+
+## Hosted setup
+
+- [PR #1](https://github.com/interurban/tacoma-public-artist-db/pull/1) contains the full foundation and both artist drafts. It is left open for owner review; nothing is merged or promoted.
+- `main` protection was applied and read back successfully: strict/up-to-date `Validate data` status, one approval, code-owner review, stale-review dismissal and resolved conversations. Force pushes and deletion are disabled. Administrator enforcement remains off, intentionally retaining James's bypass in this single-maintainer repository; agents are forbidden from using it without explicit merge authorization.
+- `CODEOWNERS` is in the foundation PR and begins supplying code-owner matching after it reaches `main`. The initial owner-authored PR cannot receive a self-approval; a future owner-authorized merge would need the administrator bypass or an independent reviewer. No additional reviewer was invented or assigned.
+- [Initial GitHub Actions run](https://github.com/interurban/tacoma-public-artist-db/actions/runs/40121642621): passed on Node 24.21.0 / npm 11.19.0. Logs confirm both entries validated, all 14 tests passed and the real PR-base history check passed. That run warned about the old runtime used by action v4; the final workflow pins the current official Node 24 actions by immutable commit: [checkout v7.0.1](https://github.com/actions/checkout/releases/tag/v7.0.1) and [setup-node v7.1.0](https://github.com/actions/setup-node/releases/tag/v7.1.0). Final-head CI is checked on the PR after that workflow update.
