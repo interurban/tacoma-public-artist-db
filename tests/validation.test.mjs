@@ -94,6 +94,25 @@ test('published entries need primary evidence', () => {
   assert.ok(errors(entry).some(e => e.includes('primary source')));
 });
 
+test('optional profiles require original plain text, real dates and primary evidence for selected work', () => {
+  const entry = changed({ profile: { biography: ['Synthetic biography, not a real artist statement.'], updated_at: today, selected_work: [{ title: 'Synthetic work', summary: 'Synthetic test summary.', url: 'https://example.org/' }] } });
+  assert.ok(errors(entry).some(e => e.includes('biography needs primary evidence')));
+  entry.sources[0].supports.push('profile.biography');
+  assert.ok(errors(entry).some(e => e.includes('selected_work')));
+  entry.sources[0].supports.push('profile.selected_work');
+  assert.deepEqual(errors(entry), []);
+  entry.profile.biography = ['<p>Not plain text</p>'];
+  assert.ok(errors(entry).length > 0);
+  entry.profile.biography = ['Synthetic biography.'];
+  entry.profile.updated_at = '2026-10-25';
+  assert.ok(errors(entry).some(e => e.includes('future')));
+  entry.profile.updated_at = today;
+  entry.profile.selected_work[0].url = 'https://example.org/unconfirmed';
+  assert.ok(errors(entry).some(e => e.includes('matching primary')));
+  entry.profile.selected_work = [];
+  assert.deepEqual(errors(entry), []);
+});
+
 test('filenames stay aligned with slugs', () => {
   assert.ok(validateEntry(seed, 'someone-else.json', today).some(e => e.includes('filename')));
 });

@@ -6,7 +6,11 @@
   "type": "artist",
   "status": "published",
   "archived": false,
-  "mediums": ["book-arts", "letterpress", "printmaking"],
+  "mediums": [
+    "book-arts",
+    "letterpress",
+    "printmaking"
+  ],
   "neighborhood": null,
   "visit_policy": "by-appointment",
   "location_public": false,
@@ -23,21 +27,60 @@
     }
   ],
   "short_bio": "Jessica Spring makes letterpress prints and artist books at Springtide Press in Tacoma.",
-  "focus_tags": ["artist-books", "workshops"],
+  "focus_tags": [
+    "artist-books",
+    "workshops"
+  ],
   "sources": [
     {
       "url": "https://springtidepress.com/portfolio/",
       "label": "Springtide Press: portfolio",
       "kind": "primary",
-      "supports": ["name", "website", "mediums", "short_bio", "other_links"],
+      "supports": [
+        "name",
+        "website",
+        "mediums",
+        "short_bio",
+        "other_links",
+        "profile.selected_work"
+      ],
       "checked_on": "2026-10-24"
     },
     {
       "url": "https://springtidepress.com/printshop/",
       "label": "Springtide Press: printshop",
       "kind": "primary",
-      "supports": ["Tacoma connection", "mediums", "short_bio", "focus_tags", "visit_policy", "other_links"],
+      "supports": [
+        "Tacoma connection",
+        "mediums",
+        "short_bio",
+        "focus_tags",
+        "visit_policy",
+        "other_links",
+        "profile.biography"
+      ],
       "checked_on": "2026-10-24"
     }
-  ]
+  ],
+  "profile": {
+    "biography": [
+      "Jessica Spring works at Springtide Press in Tacoma, making artist books, broadsides and other printed pieces. Her printshop uses wood and metal type, letterpress printing and handmade paper to produce small editions and one-of-a-kind books.",
+      "History, typography and popular culture recur in her work. Spring also collaborates with other artists on printing projects and arranges studio tours and hands-on letterpress workshops for individuals and small groups. Contact Springtide Press directly to arrange a visit."
+    ],
+    "updated_at": "2026-10-24",
+    "selected_work": [
+      {
+        "title": "Sukoshi",
+        "year": 2025,
+        "summary": "An accordion book pairing seasonal Japanese proverbs with Yoshi Nakagawa's linocuts and Spring's hand-set type, made in an edition of 100.",
+        "url": "https://springtidepress.com/portfolio/"
+      },
+      {
+        "title": "One Liners",
+        "year": 2023,
+        "summary": "An artist book gathering daily type settings from 238 metal typefaces, printed by Spring in an edition of 150 copies.",
+        "url": "https://springtidepress.com/portfolio/"
+      }
+    ]
+  }
 }

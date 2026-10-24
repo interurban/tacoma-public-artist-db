@@ -6,7 +6,9 @@
   "type": "artist",
   "status": "published",
   "archived": false,
-  "mediums": ["painting"],
+  "mediums": [
+    "painting"
+  ],
   "neighborhood": null,
   "visit_policy": null,
   "location_public": false,
@@ -19,22 +21,71 @@
     }
   ],
   "short_bio": "Dionne Bonner creates paintings and public murals in Tacoma, including work at South Tacoma Library and Tollefson Plaza.",
-  "focus_tags": ["public-art", "murals"],
-  "studio_tour_years": [2018],
+  "focus_tags": [
+    "public-art",
+    "murals"
+  ],
+  "studio_tour_years": [
+    2018
+  ],
   "sources": [
     {
       "url": "https://www.dionnebonner.com/about/",
       "label": "Dionne Bonner Art & Design: about and public art history",
       "kind": "primary",
-      "supports": ["name", "Tacoma connection", "mediums", "short_bio", "focus_tags", "studio_tour_years", "other_links"],
+      "supports": [
+        "name",
+        "Tacoma connection",
+        "mediums",
+        "short_bio",
+        "focus_tags",
+        "studio_tour_years",
+        "other_links",
+        "profile.biography"
+      ],
       "checked_on": "2026-10-24"
     },
     {
       "url": "https://www.dionnebonner.com/",
       "label": "Dionne Bonner Art & Design: projects",
       "kind": "primary",
-      "supports": ["website", "short_bio", "focus_tags"],
+      "supports": [
+        "website",
+        "short_bio",
+        "focus_tags",
+        "profile.selected_work"
+      ],
+      "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://www.parkstacoma.gov/youthmemorial/",
+      "label": "Parks Tacoma: In Loving Memory at Eastside Community Center",
+      "kind": "primary",
+      "supports": [
+        "profile.biography",
+        "profile.selected_work"
+      ],
       "checked_on": "2026-10-24"
     }
-  ]
+  ],
+  "profile": {
+    "biography": [
+      "Dionne Bonner's Tacoma practice spans painting, portraiture and community mural projects. Her Hilltop Stories exhibition connects paintings with her family's ties to the neighborhood, while her public artworks draw on conversations with local residents.",
+      "Bonner studied at the Art Institute of Seattle and The Evergreen State College. Her public work includes the Black Lives Matter mural at Tollefson Plaza and In Loving Memory at Eastside Community Center. The latter developed through interviews and workshops with the Eastside community."
+    ],
+    "updated_at": "2026-10-24",
+    "selected_work": [
+      {
+        "title": "Black Lives Matter Mural Project",
+        "year": 2022,
+        "summary": "A collaborative mural on the Tollefson Plaza steps. Bonner led the participating Tacoma artists, with community workshops, surveys and handprints contributing to its design.",
+        "url": "https://www.dionnebonner.com/"
+      },
+      {
+        "title": "In Loving Memory",
+        "summary": "A memorial mural at Eastside Community Center honoring young people lost to gun violence. Its design grew from Bonner's work with neighborhood families and residents.",
+        "url": "https://www.parkstacoma.gov/youthmemorial/"
+      }
+    ]
+  }
 }

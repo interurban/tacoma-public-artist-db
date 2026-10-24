@@ -2,7 +2,7 @@
 
 An open, community-maintained directory of Tacoma artists and art spaces. One JSON file per entry. Anyone can propose a correction; artists can ask their agent to do the file editing and open a pull request.
 
-This repository holds data, its schema and contribution tools. It has no accounts, sales, rankings or hosted profiles. A future Tacoma IRL directory can read this data; this repository does not yet change [tacomairl.com/art/](https://tacomairl.com/art/). Background: [the original proposal](https://github.com/interurban/tacoma-irl-astro/issues/152).
+This repository holds data, its schema and contribution tools. It has no accounts, sales, rankings or hosted profiles. [Tacoma IRL’s artist directory](https://tacomairl.com/art/db/) reads a reviewed, pinned snapshot of this data. Data changes reach the website through a separate reviewed sync; merging here does not automatically deploy the site. Background: [the original proposal](https://github.com/interurban/tacoma-irl-astro/issues/152).
 
 ## Ask your agent
 
@@ -44,6 +44,8 @@ LICENSE                  MIT for code, schemas and documentation
 
 The filename and slug are the stable identifier, for example `artists/jessica-spring.json`. Spaces use the same directory and an appropriate `type`. An artist can refer to a separate public studio/gallery through `space_slugs`; artists themselves never have an address field. See the [data model](docs/data-model.md) before adding fields.
 
+Optional `profile` fields hold a longer biography, selected works and a real editorial revision date for an artist detail page. They use original plain text with primary evidence, maintained in the same JSON file as the listing facts. The two sample artists demonstrate the structure. See [profile field definitions](docs/data-model.md#optional-artist-profile); no minimum word count or image is required.
+
 Initial coverage is artists working in Tacoma or maintaining a documented Tacoma art practice, and art spaces in Tacoma. Wider Pierce County coverage needs a maintainer decision. The neighborhood vocabulary uses eight broad Tacoma areas, not every locally used district name; use `null` when a source does not establish an area. Mediums and focus tags have separate vocabularies. Propose a missing term in a PR rather than misclassifying the entry.
 
 ## Check a change
@@ -67,4 +69,4 @@ Consumers should pin a Git commit, validate the schema and only list records whe
 
 ## What comes later
 
-This is the repository foundation. A website, interactive map, intake automation, monthly staleness report and integration with the Studio Tour are future work. The Studio Tour's historical artist data and media have not been imported or relicensed.
+This is the repository foundation. The browse/search website is live. Richer per-artist pages are proposed through a companion website change; interactive maps, intake automation, monthly staleness reports and Studio Tour integration remain future work. The Studio Tour's historical artist data and media have not been imported or relicensed.
