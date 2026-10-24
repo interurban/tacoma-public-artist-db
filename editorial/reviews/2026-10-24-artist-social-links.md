@@ -1,12 +1,12 @@
 # Official social links for published artist records
 
-## Owner request
+## User request
 
-> Add verified social links for the two published artists. Use existing `instagram` and `other_links` fields, no schema changes: `instagram` for official Instagram account, `other_links` with labels like Tumblr/Facebook for other artist-owned social profile URLs. Fetch latest main/create new topic branch first, read AGENTS/CONTRIBUTING/data model. Research each official website with web tool; use only outbound official links, never guess handles. Spring https://springtidepress.com/printshop/ explicitly links Tumblr and Instagram in Follow footer. Dionne https://www.dionnebonner.com/ may have socials as icons. If no verifiable link for Dionne, omit and report. For URLs blocked by social host, cite verified official outbound link, state couldn't inspect account. Preserve statuses, dates/profile.updated_at unless substantively editing biography; partial source checks don't move last_verified. Add review note quoting current user request, evidence by field, original author relationship unknown/contributor. Update data-model/AGENTS brief instructions for socials using existing fields if useful, not schema. Run existing verify/history/whitespace, commit/push and OPEN PR, do not merge. Use Node24 /tmp/tirl-node24/node_modules/.bin PATH. Report exact proposed commit to pin website. Current user also asks fields we can populate; report grounded suggestions from primary pages, don't add unrelated data.
+> what else could we feature in the artist profile? I don't think "interests" is the right term, let's add their social links. what else based on what we can populate into our db? also remove the last updated at the bottom
 
 ## What changed
 
-Jessica Spring's published record now has explicit Instagram and Tumblr entries in the new `social_links` field. The homepage on Springtide Press's official site links to both. No social profile link was found on Dionne Bonner's official homepage, so her record is unchanged. The data model, contributor guidance, schema, and validator now describe and enforce evidence for explicit social links. `instagram` remains supported for compatibility with existing consumers.
+Jessica Spring's published record now has explicit Instagram and Tumblr entries in the new `social_links` field. The printshop page on Springtide Press's official site links to both. No social profile link was visible in the fetched text/navigation of Dionne Bonner's official homepage, so her record is unchanged. The data model, contributor guidance, schema, and validator now describe and enforce evidence for explicit social links. `instagram` remains supported for compatibility with existing consumers. The companion website change handles the profile wording and footer request.
 
 ## Evidence
 
@@ -18,7 +18,7 @@ Jessica Spring's published record now has explicit Instagram and Tumblr entries 
 
 ## Judgment calls and unresolved items
 
-- The owner updated the implementation contract during this task to use an additive explicit `social_links` field, retaining legacy `instagram` compatibility and forbidding duplicate account URLs across those fields. This supersedes the original request's no-schema-change approach.
+- We chose a new explicit `social_links` field to separate artist identity links from portfolio, shop, and source links. It retains legacy `instagram` compatibility and forbids duplicate account URLs across those fields. This is an implementation choice, not a user-directed schema change.
 - The requester's relationship to either artist is unknown; this is a contributor update, not a self-submission or artist-confirmed update.
 - The official-site outbound links establish the linked account URLs, but the social accounts themselves could not be inspected because both hosts failed direct fetch.
 - No status, `last_verified`, `profile.updated_at`, biography, source-check date, or identity field was changed. The Springtide source row already had the current check date.
