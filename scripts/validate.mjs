@@ -50,6 +50,14 @@ export function validateEntry(entry, filename, today = pacificToday()) {
   }
   if (entry.type === 'artist' && entry.mediums.length === 0) errors.push('/mediums artists need at least one confirmed medium');
   if (entry.type !== 'artist' && (entry.space_slugs?.length ?? 0) > 0) errors.push('/space_slugs is only for artist entries');
+  if (entry.profile) {
+    if (entry.type !== 'artist') errors.push('/profile is only for artist entries');
+    if (entry.profile.updated_at > today) errors.push('/profile/updated_at cannot be in the future');
+    if (!entry.sources.some(s => s.kind === 'primary' && s.supports.includes('profile.biography'))) errors.push('/profile/biography needs primary evidence');
+    for (const [i, work] of (entry.profile.selected_work ?? []).entries()) {
+      if (!entry.sources.some(s => s.kind === 'primary' && s.url === work.url && s.supports.includes('profile.selected_work'))) errors.push(`/profile/selected_work/${i} needs matching primary evidence`);
+    }
+  }
   if (entry.public_address && !entry.sources.some(s => s.kind === 'primary' && s.url === entry.public_address.source_url && s.supports.includes('public_address'))) {
     errors.push('/public_address needs a matching primary source supporting public_address');
   }
@@ -81,6 +89,7 @@ export function validateHistory(previousEntries, entries) {
     else {
       if (old.status === 'published' && entry.status !== 'published') errors.push(`${old.slug}: retain published status; archive instead`);
       if (entry.last_verified < old.last_verified) errors.push(`${old.slug}: last_verified must not move backwards`);
+      if (old.profile && entry.profile && entry.profile.updated_at < old.profile.updated_at) errors.push(`${old.slug}: profile.updated_at must not move backwards`);
     }
   }
   return errors;

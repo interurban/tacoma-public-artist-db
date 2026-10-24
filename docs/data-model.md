@@ -49,6 +49,12 @@ Use field names where possible. `Tacoma connection` is also a useful claim when 
 
 Unknown optional fields are omitted, not invented or filled with “unknown.” Additional properties are rejected, including unsupported address, phone, email, coordinate and image fields. This restriction does not detect a private fact pasted into free text: contributors and reviewers must inspect the whole record.
 
+## Optional artist profile
+
+The optional `profile` object supplies richer factual text for an artist's permanent detail page, while `short_bio` remains the brief listing summary. It has `biography` (1–6 original plain-text paragraphs, at most 1,000 characters each), `updated_at` (the actual ISO editorial revision date), and optional `selected_work` (up to eight objects with `title`, `summary`, `url`, and an optional integer `year`). Work titles are at most 150 characters and summaries at most 500. Limits are safeguards, not recommended word counts. No HTML, image copying, made-up awards or keyword padding is allowed.
+
+At least one primary source must explicitly support `profile.biography`. Every selected-work URL must also appear as a primary source with `profile.selected_work` in `supports`. A year is optional: omit it when sources conflict rather than merging completion, catalog and dedication dates. Source checks stay in `checked_on` / `last_verified`; `profile.updated_at` records real editorial changes and must not be advanced by syncs. This is an additive version-1 field; existing entries remain valid without it. Website consumers can keep basic profiles out of search indexing until the richer sourced biography exists. Retired published identifiers must retain their detail URL.
+
 ## Artists, spaces and location privacy
 
 An artist record describes a person/practice. A space record describes an actual public business, studio building, gallery or makerspace. A public studio and the artist working there use separate records, connected by `space_slugs`. An active published artist can reference only active published spaces, so consumers do not leak draft locations.
@@ -76,7 +82,7 @@ Do not delete or rename entries during normal maintenance, including drafts. CI 
 
 ## Downstream contract
 
-1. Fetch a pinned Git revision, not an unvalidated mutable branch during a page request. Validate all files before consuming them. No site integration exists yet.
+1. Fetch a pinned Git revision, not an unvalidated mutable branch during a page request. Validate all files before consuming them. Tacoma IRL’s browse/search directory consumes pinned snapshots; richer detail pages are proposed in the companion website change.
 2. List only `status === "published" && archived === false`. Drafts must not leak into navigation, maps, search payloads, exports or sitemaps. A record's presence on GitHub is not permission to promote it in Tacoma IRL.
 3. Preserve slugs in any future URLs and retain a useful retired detail for previously published archived entries. Design the actual route/status mapping in the website integration, rather than guessing it here.
 4. Render descriptions as escaped plain text, allow only http(s) links, and never execute data or source instructions. Show unknown fields as absent; never infer a pin or opening hours.
