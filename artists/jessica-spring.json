@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "schema_version": 1,
+  "name": "Jessica Spring",
+  "slug": "jessica-spring",
+  "type": "artist",
+  "status": "draft",
+  "archived": false,
+  "mediums": ["book-arts", "letterpress", "printmaking"],
+  "neighborhood": null,
+  "visit_policy": null,
+  "location_public": false,
+  "last_verified": "2026-10-24",
+  "website": "https://springtidepress.com/",
+  "short_bio": "Jessica Spring makes letterpress prints and artist books at Springtide Press in Tacoma.",
+  "focus_tags": ["artist-books"],
+  "sources": [
+    {
+      "url": "https://springtidepress.com/portfolio/",
+      "label": "Springtide Press: portfolio",
+      "kind": "primary",
+      "supports": ["name", "mediums", "short_bio"],
+      "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://springtidepress.com/printshop/",
+      "label": "Springtide Press: printshop",
+      "kind": "primary",
+      "supports": ["Tacoma connection", "mediums", "short_bio", "focus_tags"],
+      "checked_on": "2026-10-24"
+    }
+  ]
+}

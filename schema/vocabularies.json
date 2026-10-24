@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/interurban/tacoma-public-artist-db/main/schema/vocabularies.json",
+  "$comment": "Version 1. Propose vocabulary additions in a pull request; preserve existing identifiers.",
+  "$defs": {
+    "type": {
+      "type": "string",
+      "enum": ["artist", "studio", "gallery", "makerspace", "print-shop", "other"]
+    },
+    "medium": {
+      "type": "string",
+      "enum": ["book-arts", "ceramics", "digital-art", "drawing", "fiber", "glass", "illustration", "jewelry", "letterpress", "metal", "mixed-media", "painting", "photography", "printmaking", "sculpture", "wood", "other"]
+    },
+    "neighborhood": {
+      "type": "string",
+      "description": "Broad Tacoma neighborhood council areas. Use null when not confirmed; never derive a location from an artwork's installation site.",
+      "enum": ["central-tacoma", "eastside", "new-tacoma", "north-end", "northeast-tacoma", "south-end", "south-tacoma", "west-end"]
+    },
+    "focus_tag": {
+      "type": "string",
+      "enum": ["public-art", "workshops", "kids-workshops", "commissions-open", "exhibitions", "artist-books", "murals"]
+    },
+    "visit_policy": {
+      "type": "string",
+      "enum": ["walk-in", "by-appointment", "open-studios-only", "not-open-to-public"]
+    }
+  }
+}

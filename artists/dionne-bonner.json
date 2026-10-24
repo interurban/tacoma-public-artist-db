@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "schema_version": 1,
+  "name": "Dionne Bonner",
+  "slug": "dionne-bonner",
+  "type": "artist",
+  "status": "draft",
+  "archived": false,
+  "mediums": ["painting"],
+  "neighborhood": null,
+  "visit_policy": null,
+  "location_public": false,
+  "last_verified": "2026-10-24",
+  "website": "https://www.dionnebonner.com/",
+  "short_bio": "Dionne Bonner creates paintings and public murals in Tacoma, including work at South Tacoma Library and Tollefson Plaza.",
+  "focus_tags": ["public-art", "murals"],
+  "sources": [
+    {
+      "url": "https://www.dionnebonner.com/about/",
+      "label": "Dionne Bonner Art & Design: about and public art history",
+      "kind": "primary",
+      "supports": ["name", "Tacoma connection", "mediums", "short_bio", "focus_tags"],
+      "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://www.dionnebonner.com/",
+      "label": "Dionne Bonner Art & Design: projects",
+      "kind": "primary",
+      "supports": ["website", "short_bio", "focus_tags"],
+      "checked_on": "2026-10-24"
+    }
+  ]
+}

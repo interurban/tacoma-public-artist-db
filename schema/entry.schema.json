@@ -1,0 +1,291 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/interurban/tacoma-public-artist-db/main/schema/entry.schema.json",
+  "title": "Tacoma Public Artist DB entry, version 1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "name",
+    "slug",
+    "type",
+    "status",
+    "archived",
+    "mediums",
+    "neighborhood",
+    "visit_policy",
+    "location_public",
+    "last_verified",
+    "sources"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "const": "../schema/entry.schema.json"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "name": {
+      "$ref": "#/$defs/text",
+      "maxLength": 120,
+      "type": "string"
+    },
+    "slug": {
+      "$ref": "#/$defs/slug"
+    },
+    "type": {
+      "$ref": "vocabularies.json#/$defs/type"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "published"
+      ]
+    },
+    "archived": {
+      "type": "boolean"
+    },
+    "mediums": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "vocabularies.json#/$defs/medium"
+      }
+    },
+    "neighborhood": {
+      "anyOf": [
+        {
+          "$ref": "vocabularies.json#/$defs/neighborhood"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "visit_policy": {
+      "anyOf": [
+        {
+          "$ref": "vocabularies.json#/$defs/visit_policy"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "location_public": {
+      "type": "boolean"
+    },
+    "last_verified": {
+      "type": "string",
+      "format": "date"
+    },
+    "website": {
+      "$ref": "#/$defs/url"
+    },
+    "instagram": {
+      "$ref": "#/$defs/url"
+    },
+    "other_links": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "url"
+        ],
+        "properties": {
+          "label": {
+            "$ref": "#/$defs/text",
+            "maxLength": 100,
+            "type": "string"
+          },
+          "url": {
+            "$ref": "#/$defs/url"
+          }
+        }
+      }
+    },
+    "short_bio": {
+      "$ref": "#/$defs/text",
+      "maxLength": 300,
+      "type": "string"
+    },
+    "focus_tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "vocabularies.json#/$defs/focus_tag"
+      }
+    },
+    "hours": {
+      "$ref": "#/$defs/text",
+      "maxLength": 200,
+      "type": "string"
+    },
+    "studio_tour_years": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "integer",
+        "minimum": 1990,
+        "maximum": 2100
+      }
+    },
+    "space_slugs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/slug"
+      }
+    },
+    "public_address": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "street",
+        "city",
+        "region",
+        "postal_code",
+        "country",
+        "source_url"
+      ],
+      "properties": {
+        "street": {
+          "$ref": "#/$defs/text",
+          "maxLength": 150,
+          "type": "string"
+        },
+        "city": {
+          "const": "Tacoma"
+        },
+        "region": {
+          "const": "WA"
+        },
+        "postal_code": {
+          "type": "string",
+          "pattern": "^984[0-9]{2}(-[0-9]{4})?$"
+        },
+        "country": {
+          "const": "US"
+        },
+        "source_url": {
+          "$ref": "#/$defs/url"
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "url",
+          "label",
+          "kind",
+          "supports",
+          "checked_on"
+        ],
+        "properties": {
+          "url": {
+            "$ref": "#/$defs/url"
+          },
+          "label": {
+            "$ref": "#/$defs/text",
+            "maxLength": 150,
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "primary",
+              "secondary"
+            ]
+          },
+          "supports": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/$defs/text",
+              "maxLength": 120,
+              "type": "string"
+            }
+          },
+          "checked_on": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "artist"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "location_public": {
+            "const": false
+          },
+          "public_address": false
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "location_public": {
+            "const": true
+          }
+        },
+        "required": [
+          "location_public"
+        ]
+      },
+      "then": {
+        "properties": {
+          "public_address": {}
+        },
+        "required": [
+          "public_address"
+        ]
+      },
+      "else": {
+        "properties": {
+          "public_address": false
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[^<>\\r\\n]*\\S[^<>\\r\\n]*$"
+    },
+    "slug": {
+      "type": "string",
+      "maxLength": 100,
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://",
+      "maxLength": 2048
+    }
+  }
+}
