@@ -90,5 +90,5 @@ Do not delete or rename entries during normal maintenance, including drafts. CI 
 - `studio_tour_years` replaces the ambiguous “boolean, with year(s).”
 - `archived`, publication status, evidence, version and artist-to-space references are explicit fields.
 - Addresses are limited to separate space records; there are no personal contact or image fields.
-- This initial repository uses CC0 for data and MIT for its code/docs, as approved by the owner. It starts with two sourced drafts rather than 15–25 artist-confirmed live listings.
+- This initial repository uses CC0 for data and MIT for its code/docs, as approved by the owner. It initially seeded two sourced drafts rather than 15–25 artist-confirmed live listings; James subsequently approved publishing those two source-based records for the directory, as recorded in the publication review.
 - Broader coverage, form intake, confirmations, website integration, maps, staleness reports and tour imports are outside this first change.
