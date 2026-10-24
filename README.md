@@ -21,7 +21,9 @@ No agent or local tools? Use GitHub's pencil button on an [entry](artists/) and 
 | Jessica Spring | Letterpress, printmaking and artist books | [jessica-spring.json](artists/jessica-spring.json) |
 | Dionne Bonner | Painting and public murals | [dionne-bonner.json](artists/dionne-bonner.json) |
 
-These are researched **drafts**, checked against the artists' own websites on October 24, 2026. Neither artist has confirmed this listing or given listing permission. Neighborhood and visit policy remain `null`. A draft in this public repository is publicly readable; `draft` means a downstream directory must exclude it, not that the file is private. The [seed review](editorial/reviews/2026-10-24-seed-artists.md) records evidence and unresolved items.
+These are researched **drafts**, checked against the artists' own websites on October 24, 2026. Neither artist has confirmed this listing or given listing permission. Both neighborhoods and Dionne's visit policy remain `null`; Jessica's site invites visitors to arrange a studio tour, so her visit policy is `by-appointment`. Dionne's artist history documents 2018 Studio Tour participation, recorded as a historical year. A draft in this public repository is publicly readable; `draft` means a downstream directory must exclude it, not that the file is private. The [seed review](editorial/reviews/2026-10-24-seed-artists.md) records evidence and unresolved items.
+
+Open either record above to see the actual structure: identity and status first, then mediums/location/access, official links and a short bio, followed by tagged interests and field-level source evidence. `null` means unconfirmed; optional fields such as `studio_tour_years` appear only when supported. Each source says which fields it supports and when it was checked.
 
 ## How the repository works
 
