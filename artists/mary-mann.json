@@ -1,0 +1,128 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "schema_version": 1,
+  "name": "Mary Mann",
+  "slug": "mary-mann",
+  "type": "artist",
+  "status": "draft",
+  "archived": false,
+  "mediums": [
+    "painting"
+  ],
+  "neighborhood": null,
+  "visit_policy": null,
+  "location_public": false,
+  "last_verified": "2026-10-24",
+  "website": "https://www.marymannpainter.com/",
+  "other_links": [
+    {
+      "label": "Public art and murals",
+      "url": "https://www.marymannpainter.com/public-art"
+    }
+  ],
+  "short_bio": "Mary Mann is a Tacoma painter of detailed forest landscapes and a muralist whose public commissions include The Ripple Effect on Schuster Parkway.",
+  "focus_tags": [
+    "public-art",
+    "murals"
+  ],
+  "education": [
+    {
+      "institution": "Colorado Institute of Art",
+      "credential": "Associate's Degree in Advertising Design",
+      "year": 1983
+    },
+    {
+      "institution": "Bates Technical College",
+      "credential": "Degree in Career Technical Education",
+      "year": 2010
+    }
+  ],
+  "awards": [
+    {
+      "name": "Tacoma Artist Initiative Project Grant",
+      "kind": "grant"
+    }
+  ],
+  "public_works": [
+    {
+      "title": "The Ripple Effect",
+      "place": "Schuster Parkway underpass at the Chinese Reconciliation Park",
+      "year": 2023
+    },
+    {
+      "title": "Gateway to India Mural",
+      "place": "Gateway to India restaurant",
+      "year": 2025
+    },
+    {
+      "title": "Dragon with Poppies",
+      "place": "Wedderman Architecture, South 48th and Yakima",
+      "year": 2024
+    },
+    {
+      "title": "Tacoma Little Theater Mural",
+      "place": "Tacoma Little Theater",
+      "year": 2002
+    },
+    {
+      "title": "North Pacific Bank Mural",
+      "place": "South 56th and South Washington Street",
+      "year": 1998
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.marymannpainter.com/about-7",
+      "label": "Mary Mann Painter: about",
+      "kind": "primary",
+      "supports": [
+        "name",
+        "website",
+        "mediums",
+        "Tacoma connection",
+        "short_bio",
+        "education",
+        "profile.biography",
+        "social_links"
+      ],
+      "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://www.marymannpainter.com/teaching-artist",
+      "label": "Mary Mann Painter: teaching artist",
+      "kind": "primary",
+      "supports": [
+        "Tacoma connection",
+        "short_bio",
+        "awards",
+        "focus_tags",
+        "profile.biography"
+      ],
+      "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://www.marymannpainter.com/public-art",
+      "label": "Mary Mann Painter: murals",
+      "kind": "primary",
+      "supports": [
+        "public_works",
+        "focus_tags",
+        "other_links"
+      ],
+      "checked_on": "2026-10-24"
+    }
+  ],
+  "profile": {
+    "biography": [
+      "Mary Mann is a Tacoma painter and muralist. Her studio paintings use trees and forest edges as metaphors for family, resilience and community, built from her own photographs and memories of Pacific Northwest forests and shorelines.",
+      "She trained at the Colorado Institute of Art and at Bates Technical College, and has made grant-funded murals around Tacoma, often with high school students taking part. Her largest public work, The Ripple Effect, covers the Schuster Parkway underpass beside the Chinese Reconciliation Park."
+    ],
+    "updated_at": "2026-10-24"
+  },
+  "social_links": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/marymann365/"
+    }
+  ]
+}

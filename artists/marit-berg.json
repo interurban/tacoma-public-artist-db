@@ -1,0 +1,42 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "schema_version": 1,
+  "name": "Marit Berg",
+  "slug": "marit-berg",
+  "type": "artist",
+  "status": "draft",
+  "archived": false,
+  "mediums": [
+    "printmaking",
+    "painting"
+  ],
+  "neighborhood": null,
+  "visit_policy": null,
+  "location_public": false,
+  "last_verified": "2026-10-24",
+  "website": "https://www.maritberg.com/",
+  "short_bio": "Marit Berg makes prints and paintings that mix myth, animals and landscape, and has taught printmaking at Tacoma Community College.",
+  "sources": [
+    {
+      "url": "https://www.maritberg.com/about",
+      "label": "Marit Berg: about",
+      "kind": "primary",
+      "supports": [
+        "name",
+        "website",
+        "mediums",
+        "Tacoma connection",
+        "short_bio",
+        "profile.biography"
+      ],
+      "checked_on": "2026-10-24"
+    }
+  ],
+  "profile": {
+    "biography": [
+      "Marit Berg works between printmaking and painting. Her prints run from relief and etching to screenprint and often take up myth, allegory, animals and landscape, while her paintings are figurative and freely composed.",
+      "The daughter of a printmaking professor and an abstract painter, she grew up travelling to museums and schools, and after completing an MFA took a position in Tacoma Community College's printmaking department. She teaches printmaking, which she describes as a way to focus on process and craftsmanship."
+    ],
+    "updated_at": "2026-10-24"
+  }
+}
