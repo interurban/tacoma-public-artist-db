@@ -70,6 +70,9 @@
       "year": 1998
     }
   ],
+  "studio_tour_years": [
+    2026
+  ],
   "sources": [
     {
       "url": "https://www.marymannpainter.com/about-7",
@@ -108,6 +111,15 @@
         "public_works",
         "focus_tags",
         "other_links"
+      ],
+      "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://experience.arcgis.com/experience/e0352e9b15244722b4695c7cfcf0a8c4/",
+      "label": "Tacoma Arts Month: Tacoma Studio Tour 2026 artist map",
+      "kind": "primary",
+      "supports": [
+        "studio_tour_years"
       ],
       "checked_on": "2026-10-24"
     }
