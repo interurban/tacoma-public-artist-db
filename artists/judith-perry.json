@@ -17,6 +17,28 @@
   "studio_tour_years": [
     2026
   ],
+  "short_bio": "Judith Perry is a painter working in oil, watercolor and calligraphy, with a background in figure work at the School of the Art Institute of Chicago.",
+  "education": [
+    {
+      "institution": "Pacific Lutheran University"
+    },
+    {
+      "institution": "University of Puget Sound"
+    },
+    {
+      "institution": "School of the Art Institute of Chicago"
+    }
+  ],
+  "affiliations": [
+    {
+      "name": "Hawaii Watercolor Society",
+      "role": "Signature member"
+    },
+    {
+      "name": "Women Painters of Washington",
+      "role": "President"
+    }
+  ],
   "sources": [
     {
       "url": "https://experience.arcgis.com/experience/e0352e9b15244722b4695c7cfcf0a8c4/",
@@ -30,6 +52,33 @@
         "website"
       ],
       "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://judithperryart.com/about.html",
+      "label": "Judith Perry Art: about the artist",
+      "kind": "primary",
+      "supports": [
+        "short_bio",
+        "profile.biography",
+        "education"
+      ],
+      "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://judithperryart.com/",
+      "label": "Judith Perry Art: home",
+      "kind": "primary",
+      "supports": [
+        "affiliations"
+      ],
+      "checked_on": "2026-10-24"
     }
-  ]
+  ],
+  "profile": {
+    "biography": [
+      "Judith Perry is a painter whose work moves between large oils, watercolors, calligraphy and sketches. She works in series, returning to the same subject to see how light, color and shape change it.",
+      "She grew up in southwest Washington and studied figure work at the School of the Art Institute of Chicago, with further study at Pacific Lutheran University, the University of Puget Sound and the Honolulu School of the Arts. Her paintings have shown at galleries in Washington and Hawaii, and she is a signature member of the Hawaii Watercolor Society and president of Women Painters of Washington."
+    ],
+    "updated_at": "2026-10-24"
+  }
 }

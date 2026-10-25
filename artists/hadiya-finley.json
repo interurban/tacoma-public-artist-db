@@ -29,6 +29,7 @@
   "studio_tour_years": [
     2026
   ],
+  "short_bio": "Hadiya Finley is a sculptor working in bronze and mixed media, making figures of the female form from miniature to life size.",
   "sources": [
     {
       "url": "https://experience.arcgis.com/experience/e0352e9b15244722b4695c7cfcf0a8c4/",
@@ -43,6 +44,23 @@
         "social_links"
       ],
       "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://www.barefootbird.com/the_story",
+      "label": "Barefootbird: story",
+      "kind": "primary",
+      "supports": [
+        "short_bio",
+        "profile.biography"
+      ],
+      "checked_on": "2026-10-24"
     }
-  ]
+  ],
+  "profile": {
+    "biography": [
+      "Hadiya Finley makes sculpture of the female figure in bronze and mixed media, at scales from miniature to life size. Her work draws on assemblage and found objects.",
+      "She studied with assemblage artist George Herms, and describes her practice as growing from a childhood habit of turning discarded materials into figures and small worlds into an approach that reworks what she finds into unified pieces."
+    ],
+    "updated_at": "2026-10-24"
+  }
 }

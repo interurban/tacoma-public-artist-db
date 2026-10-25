@@ -25,6 +25,14 @@
   "studio_tour_years": [
     2026
   ],
+  "short_bio": "Roxann Murray is a Tacoma photographer and multidisciplinary artist documenting community, nature and travel, with beadwork drawing on her Celtic and Nakoda/Dakota ancestry.",
+  "education": [
+    {
+      "institution": "University of Washington Tacoma",
+      "credential": "BA, Interdisciplinary Arts and Sciences",
+      "year": 2009
+    }
+  ],
   "sources": [
     {
       "url": "https://experience.arcgis.com/experience/e0352e9b15244722b4695c7cfcf0a8c4/",
@@ -39,6 +47,34 @@
         "social_links"
       ],
       "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://www.atouchofwanderlust.com/",
+      "label": "Roxann Murray: home",
+      "kind": "primary",
+      "supports": [
+        "short_bio",
+        "profile.biography",
+        "education"
+      ],
+      "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://www.atouchofwanderlust.com/resume",
+      "label": "Roxann Murray: CV",
+      "kind": "primary",
+      "supports": [
+        "education",
+        "profile.biography"
+      ],
+      "checked_on": "2026-10-24"
     }
-  ]
+  ],
+  "profile": {
+    "biography": [
+      "Roxann Murray is a photographer and multidisciplinary artist in Tacoma. Her photographs focus on pattern, color and candid portraits, and she also makes beadwork, digital collage and illustrations.",
+      "She studied Interdisciplinary Arts and Sciences at UW Tacoma, graduating in 2009 with a certificate of high scholarship, and has collaborated with the Indigenous Creatives Collective, National Nurses United and the City of Seattle's Office of Arts and Culture."
+    ],
+    "updated_at": "2026-10-24"
+  }
 }

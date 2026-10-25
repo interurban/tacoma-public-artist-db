@@ -25,6 +25,13 @@
   "studio_tour_years": [
     2026
   ],
+  "short_bio": "Lucia Harrison is an artist and bookmaker whose prints, drawings and artist books focus on place, native plants and the Salish Sea landscape.",
+  "public_works": [
+    {
+      "title": "Native Plant Garden interpretive panels",
+      "place": "Point Defiance Park"
+    }
+  ],
   "sources": [
     {
       "url": "https://experience.arcgis.com/experience/e0352e9b15244722b4695c7cfcf0a8c4/",
@@ -39,6 +46,33 @@
         "social_links"
       ],
       "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://luciaharrison.com/",
+      "label": "Lucia Harrison: home",
+      "kind": "primary",
+      "supports": [
+        "short_bio",
+        "profile.biography"
+      ],
+      "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://img-cache.oppcdn.com/fixed/21900/resume.pdf",
+      "label": "Lucia Harrison: resume",
+      "kind": "primary",
+      "supports": [
+        "profile.biography",
+        "public_works"
+      ],
+      "checked_on": "2026-10-24"
     }
-  ]
+  ],
+  "profile": {
+    "biography": [
+      "Lucia Harrison makes artist books, prints, drawings and maps about the natural world, often built around a specific place: the Nisqually Delta, Tanwax Creek, the South Salish Sea and the native plants of the Pacific Northwest.",
+      "She taught visual arts at The Evergreen State College for more than three decades, and has made interpretive panels, puzzles and downloadable habitat books that put the work in front of people outside galleries."
+    ],
+    "updated_at": "2026-10-24"
+  }
 }

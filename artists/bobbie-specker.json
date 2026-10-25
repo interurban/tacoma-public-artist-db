@@ -23,6 +23,8 @@
   "studio_tour_years": [
     2026
   ],
+  "short_bio": "Bobbie Specker makes hand-built functional ceramics — vessels, vases, planters and tableware — from her studio in Tacoma.",
+  "practice_name": "Bobbie Specker Ceramics",
   "sources": [
     {
       "url": "https://experience.arcgis.com/experience/e0352e9b15244722b4695c7cfcf0a8c4/",
@@ -37,6 +39,24 @@
         "social_links"
       ],
       "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://www.bobbiespeckerceramics.com/about",
+      "label": "Bobbie Specker Ceramics: about",
+      "kind": "primary",
+      "supports": [
+        "practice_name",
+        "short_bio",
+        "profile.biography",
+        "Tacoma connection"
+      ],
+      "checked_on": "2026-10-24"
     }
-  ]
+  ],
+  "profile": {
+    "biography": [
+      "Barb “Bobbie” Specker makes functional, contemporary ceramics. Every piece is hand built in her small garage studio in Tacoma, in runs that move between vessels, vases, planters and table pieces."
+    ],
+    "updated_at": "2026-10-24"
+  }
 }

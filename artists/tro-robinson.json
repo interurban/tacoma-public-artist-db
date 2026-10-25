@@ -23,6 +23,8 @@
   "studio_tour_years": [
     2026
   ],
+  "short_bio": "Tro Robinson makes cut-paper paintings built from color, shape and movement, drawing on music and the Pacific coast.",
+  "practice_name": "Rhythm Coast Studio",
   "sources": [
     {
       "url": "https://experience.arcgis.com/experience/e0352e9b15244722b4695c7cfcf0a8c4/",
@@ -37,6 +39,24 @@
         "social_links"
       ],
       "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://www.rhythmcoaststudio.com/about",
+      "label": "Rhythm Coast Studio: about",
+      "kind": "primary",
+      "supports": [
+        "practice_name",
+        "short_bio",
+        "profile.biography"
+      ],
+      "checked_on": "2026-10-24"
     }
-  ]
+  ],
+  "profile": {
+    "biography": [
+      "Tro Robinson makes what he calls paper paintings: cut-paper works that began in sculpture and painting and grew into a single practice. He traces the approach to Matisse's idea of carving into color.",
+      "Music and movement run through the work, which he describes as a visual feeling for the rhythms of the coast and for the place where land, sea and sky meet."
+    ],
+    "updated_at": "2026-10-24"
+  }
 }
