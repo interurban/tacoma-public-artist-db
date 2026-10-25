@@ -4,7 +4,7 @@
   "name": "Mary Mann",
   "slug": "mary-mann",
   "type": "artist",
-  "status": "draft",
+  "status": "published",
   "archived": false,
   "mediums": [
     "painting"

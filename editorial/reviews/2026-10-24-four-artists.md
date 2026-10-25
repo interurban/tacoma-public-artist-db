@@ -8,7 +8,7 @@
 
 `README.md` is rewritten for artists rather than developers. It now says what the list is, that it is a work in progress, how to email a correction or request a listing, what is listed and what is never listed, and how the data may be reused. The owner's name, the schema/CI/test walkthrough, the file tree, the downstream contract and the “first two entries” section are gone. The shortened agent prompt is the last section; its heading stays “Ask your agent” so the existing `README.md#ask-your-agent` link in [CONTRIBUTING.md](../CONTRIBUTING.md) still resolves.
 
-Four new records, all `status: draft`: Mary Mann, Curtis Ashby, Marit Berg and Devin Lawrence Reynolds. Each cites only the artist's own site. Two already carry sourced education, awards, affiliations or public works, so the practice-detail fields have more than two examples.
+Four new records: Mary Mann, Curtis Ashby, Marit Berg and Devin Lawrence Reynolds. The owner approved publishing all four on October 24, 2026, so each record carries `status: published`; the facts were checked against the artists' own pages that day. Each cites only the artist's own site. Two already carry sourced education, awards, affiliations or public works, so the practice-detail fields have more than two examples.
 
 ## Evidence
 
@@ -23,7 +23,7 @@ Four new records, all `status: draft`: Mary Mann, Curtis Ashby, Marit Berg and D
 
 ## Judgment calls and omissions
 
-- **Drafts, not publication.** All four start `status: draft` with `archived: false`. The owner's request was to add them; publication still needs the owner's review and listing permission, and no artist was contacted.
+- **Publication is the owner's decision, not artist consent.** The owner approved publishing all four. Owner approval is not artist confirmation or endorsement: no artist was contacted, and no listing permission was obtained. Publication remains distinct from the owners of the linked sites, whose content and images this repository does not license.
 - **Tacoma connection for Marit Berg** rests on her own statement that she took a position in Tacoma Community College's printmaking department. That is a documented Tacoma practice (teaching), not a claim that she lives in Tacoma. It is the weakest Tacoma link of the four and the first thing to drop if the maintainer prefers residence or a Tacoma studio as the test.
 - **No neighborhoods or visit policies.** None of the four publishes a Tacoma area or studio-visit policy, so both stay `null` rather than being guessed.
 - **Public-work selection.** Mary Mann's 1995 Stadium District mural is left out because her own page says a building was later constructed in front of it. A 2024 Environmental Services mural is left out because the page gives no site name, only “Tacoma”. Curtis Ashby's resume gives cities and years; the five Tacoma-area projects are kept and the Puyallup/Sumner/Port Orchard/University Place entries are not, since this directory is Tacoma.
@@ -35,7 +35,6 @@ Four new records, all `status: draft`: Mary Mann, Curtis Ashby, Marit Berg and D
 
 ## Unresolved items
 
-- Publication of all four is the owner's call. Nothing here sets `status: published`.
 - The README now sends artists to email rather than GitHub. `CONTRIBUTING.md` and `AGENTS.md` still name the owner as reviewer; the owner asked for the name to be removed from the README only, so those files are unchanged.
 - The README no longer links the data model or the downstream contract. Those remain in `docs/data-model.md` and are still linked from `CONTRIBUTING.md`.
 
