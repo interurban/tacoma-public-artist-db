@@ -1,0 +1,133 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "schema_version": 1,
+  "name": "Curtis Ashby",
+  "slug": "curtis-ashby",
+  "type": "artist",
+  "status": "published",
+  "archived": false,
+  "mediums": [
+    "illustration",
+    "painting"
+  ],
+  "neighborhood": null,
+  "visit_policy": null,
+  "location_public": false,
+  "last_verified": "2026-10-24",
+  "website": "https://www.curtisashbyart.com/",
+  "other_links": [
+    {
+      "label": "Mural and illustration resume",
+      "url": "https://www.curtisashbyart.com/artist-resume"
+    }
+  ],
+  "short_bio": "Curtis Ashby is a Tacoma muralist, illustrator and graphic designer whose public murals, often featuring birds and regional wildlife, are painted across the South Sound.",
+  "focus_tags": [
+    "public-art",
+    "murals"
+  ],
+  "affiliations": [
+    {
+      "name": "Foster's Creative",
+      "role": "Senior Graphic Designer"
+    },
+    {
+      "name": "Metro Parks Tacoma Arts & Heritage Council",
+      "role": "Former Vice Chair"
+    }
+  ],
+  "awards": [
+    {
+      "name": "Tacoma Artists Initiative Program Grant, City of Tacoma",
+      "kind": "grant"
+    },
+    {
+      "name": "Distinguished Service Community Award, Tahoma Bird Alliance",
+      "kind": "award",
+      "year": 2019
+    }
+  ],
+  "public_works": [
+    {
+      "title": "Mary Bridge Children's Hospital murals",
+      "place": "Mary Bridge Children's Hospital",
+      "year": 2026
+    },
+    {
+      "title": "Emergency Food Network mural",
+      "place": "Emergency Food Network",
+      "year": 2024
+    },
+    {
+      "title": "South Sound Scooters mural",
+      "place": "South Sound Scooters",
+      "year": 2024
+    },
+    {
+      "title": "McKinley Hill mural",
+      "place": "McKinley Hill",
+      "year": 2023
+    },
+    {
+      "title": "Tahoma Audubon Society mural",
+      "place": "Tahoma Audubon Society"
+    }
+  ],
+  "news_url": "https://www.curtisashbyart.com/blog",
+  "sources": [
+    {
+      "url": "https://www.curtisashbyart.com/about-me",
+      "label": "Curtis Ashby Art: about",
+      "kind": "primary",
+      "supports": [
+        "name",
+        "website",
+        "mediums",
+        "Tacoma connection",
+        "short_bio",
+        "focus_tags",
+        "affiliations",
+        "profile.biography",
+        "social_links"
+      ],
+      "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://www.curtisashbyart.com/artist-resume",
+      "label": "Curtis Ashby Art: artist resume",
+      "kind": "primary",
+      "supports": [
+        "awards",
+        "public_works",
+        "focus_tags"
+      ],
+      "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://www.curtisashbyart.com/blog",
+      "label": "Curtis Ashby Art: blog",
+      "kind": "primary",
+      "supports": [
+        "news_url"
+      ],
+      "checked_on": "2026-10-24"
+    }
+  ],
+  "profile": {
+    "biography": [
+      "Curtis Ashby is a Tacoma muralist, illustrator and graphic designer. His large-scale public paintings, often built around birds and other regional wildlife, are on buildings, traffic boxes and hospital walls around Tacoma, Puyallup and Sumner.",
+      "He joined the City of Tacoma's mural roster in 2016 and has since painted for cities, nonprofits, hospitals and local businesses, including a full-building mural for the Tahoma Audubon Society and work at Mary Bridge Children's Hospital. He is a senior graphic designer at Foster's Creative and previously served as vice chair of the Metro Parks Tacoma Arts & Heritage Council."
+    ],
+    "updated_at": "2026-10-24"
+  },
+  "social_links": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/curtisashbyart/"
+    },
+    {
+      "label": "Facebook",
+      "url": "https://www.facebook.com/curtisashbyart/"
+    }
+  ]
+}

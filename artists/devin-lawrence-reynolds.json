@@ -1,0 +1,48 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "schema_version": 1,
+  "name": "Devin Lawrence Reynolds",
+  "slug": "devin-lawrence-reynolds",
+  "type": "artist",
+  "status": "published",
+  "archived": false,
+  "mediums": [
+    "painting"
+  ],
+  "neighborhood": null,
+  "visit_policy": null,
+  "location_public": false,
+  "last_verified": "2026-10-24",
+  "website": "https://www.devinlawrencereynolds.com/",
+  "short_bio": "Devin Lawrence Reynolds is a Tacoma painter working in still life, floral and figurative subjects with traditional techniques.",
+  "sources": [
+    {
+      "url": "https://www.devinlawrencereynolds.com/about-the-artist",
+      "label": "Devin Lawrence Reynolds: about the artist",
+      "kind": "primary",
+      "supports": [
+        "name",
+        "website",
+        "mediums",
+        "Tacoma connection",
+        "short_bio",
+        "profile.biography",
+        "social_links"
+      ],
+      "checked_on": "2026-10-24"
+    }
+  ],
+  "profile": {
+    "biography": [
+      "Devin Lawrence Reynolds is a contemporary painter in Tacoma working across still life, floral and figurative subjects. He builds on traditional painting technique to explore identity, memory, time and mortality.",
+      "His still lifes treat ordinary objects as symbols of memory, luck and labour; his floral paintings consider growth, structure and impermanence; and his figures explore courage, vulnerability and transformation."
+    ],
+    "updated_at": "2026-10-24"
+  },
+  "social_links": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/devinlawrencereynolds/"
+    }
+  ]
+}
