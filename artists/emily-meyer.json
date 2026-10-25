@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "schema_version": 1,
+  "name": "Emily Meyer",
+  "slug": "emily-meyer",
+  "type": "artist",
+  "status": "draft",
+  "archived": false,
+  "mediums": [
+    "jewelry",
+    "mixed-media"
+  ],
+  "neighborhood": null,
+  "visit_policy": null,
+  "location_public": false,
+  "last_verified": "2026-10-24",
+  "website": "https://linktree.cx/emsgarden",
+  "studio_tour_years": [
+    2026
+  ],
+  "sources": [
+    {
+      "url": "https://experience.arcgis.com/experience/e0352e9b15244722b4695c7cfcf0a8c4/",
+      "label": "Tacoma Arts Month: Tacoma Studio Tour 2026 artist map",
+      "kind": "primary",
+      "supports": [
+        "name",
+        "mediums",
+        "studio_tour_years",
+        "Tacoma connection",
+        "website"
+      ],
+      "checked_on": "2026-10-24"
+    }
+  ]
+}

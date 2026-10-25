@@ -9,7 +9,7 @@
     },
     "medium": {
       "type": "string",
-      "enum": ["book-arts", "ceramics", "digital-art", "drawing", "fiber", "glass", "illustration", "jewelry", "letterpress", "metal", "mixed-media", "painting", "photography", "printmaking", "sculpture", "wood", "other"]
+      "enum": ["book-arts", "ceramics", "digital-art", "drawing", "fashion", "fiber", "film", "glass", "illustration", "installation", "jewelry", "letterpress", "metal", "mixed-media", "music", "painting", "performance", "photography", "printmaking", "sculpture", "wood", "writing", "other"]
     },
     "neighborhood": {
       "type": "string",

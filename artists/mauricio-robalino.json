@@ -1,0 +1,48 @@
+{
+  "$schema": "../schema/entry.schema.json",
+  "schema_version": 1,
+  "name": "Mauricio Robalino",
+  "slug": "mauricio-robalino",
+  "type": "artist",
+  "status": "draft",
+  "archived": false,
+  "mediums": [
+    "glass",
+    "painting",
+    "printmaking"
+  ],
+  "neighborhood": null,
+  "visit_policy": null,
+  "location_public": false,
+  "last_verified": "2026-10-24",
+  "website": "https://www.artpeople.com",
+  "social_links": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/mauricio.robalino.7"
+    },
+    {
+      "label": "Facebook",
+      "url": "https://www.facebook.com/mauricio.robalino.7"
+    }
+  ],
+  "studio_tour_years": [
+    2026
+  ],
+  "sources": [
+    {
+      "url": "https://experience.arcgis.com/experience/e0352e9b15244722b4695c7cfcf0a8c4/",
+      "label": "Tacoma Arts Month: Tacoma Studio Tour 2026 artist map",
+      "kind": "primary",
+      "supports": [
+        "name",
+        "mediums",
+        "studio_tour_years",
+        "Tacoma connection",
+        "website",
+        "social_links"
+      ],
+      "checked_on": "2026-10-24"
+    }
+  ]
+}
