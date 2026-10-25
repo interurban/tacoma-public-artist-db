@@ -125,6 +125,52 @@ test('optional profiles require original plain text, real dates and primary evid
   assert.deepEqual(errors(entry), []);
 });
 
+test('practice details need primary evidence, real past years and artist records', () => {
+  const entry = changed({
+    practice_name: 'Synthetic Studio',
+    education: [{ institution: 'Synthetic College', credential: 'BFA', year: 2004 }],
+    awards: [{ name: 'Synthetic Fellowship', kind: 'fellowship', year: 2020 }],
+    affiliations: [{ name: 'Synthetic Gallery', role: 'Represented' }],
+    public_works: [{ title: 'Synthetic mural', place: 'Synthetic Plaza', year: 2019, temporary: false }],
+    news_url: 'https://example.org/news/'
+  });
+  for (const field of ['practice_name', 'education', 'awards', 'affiliations', 'public_works', 'news_url']) {
+    assert.ok(errors(entry).some(e => e.includes(`${field} needs primary evidence`)), field);
+  }
+  entry.sources[0].supports.push('practice_name', 'education', 'awards', 'affiliations', 'public_works', 'news_url');
+  assert.deepEqual(errors(entry), []);
+
+  entry.awards[0].kind = 'prize';
+  assert.ok(errors(entry).some(e => e.includes('/awards/0/kind')));
+  entry.awards[0].kind = 'fellowship';
+
+  entry.education[0].year = 2027;
+  assert.ok(errors(entry).some(e => e.includes('/education/0/year')));
+  entry.education[0].year = 2004;
+
+  entry.public_works[0].year = 2027;
+  assert.ok(errors(entry).some(e => e.includes('/public_works/0/year')));
+  entry.public_works[0].year = 2019;
+
+  entry.public_works[0].temporary = 'sometimes';
+  assert.ok(errors(entry).some(e => e.includes('/public_works/0/temporary')));
+  entry.public_works[0].temporary = true;
+
+  entry.practice_name = '<b>Synthetic Studio</b>';
+  assert.ok(errors(entry).length > 0);
+  entry.practice_name = 'Synthetic Studio';
+  assert.deepEqual(errors(entry), []);
+
+  const space = changed({ type: 'studio', mediums: [], affiliations: [{ name: 'Synthetic district' }], sources: [{ ...seed.sources[0], supports: ['affiliations'] }] });
+  assert.deepEqual(errors(space), []);
+  space.public_works = entry.public_works;
+  space.sources[0].supports.push('public_works');
+  assert.ok(errors(space).some(e => e.includes('only for artist entries')));
+
+  const address = { street: 'Example only', city: 'Tacoma', region: 'WA', postal_code: '98402', country: 'US', source_url: 'https://example.org/' };
+  assert.ok(errors(changed({ public_works: entry.public_works, public_address: address })).some(e => e.includes('/public_address')));
+});
+
 test('filenames stay aligned with slugs', () => {
   assert.ok(validateEntry(seed, 'someone-else.json', today).some(e => e.includes('filename')));
 });

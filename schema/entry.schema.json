@@ -302,6 +302,137 @@
           }
         }
       }
+    },
+    "practice_name": {
+      "$ref": "#/$defs/text",
+      "type": "string",
+      "maxLength": 120
+    },
+    "education": {
+      "type": "array",
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "institution"
+        ],
+        "properties": {
+          "institution": {
+            "$ref": "#/$defs/text",
+            "type": "string",
+            "maxLength": 150
+          },
+          "credential": {
+            "$ref": "#/$defs/text",
+            "type": "string",
+            "maxLength": 120
+          },
+          "year": {
+            "type": "integer",
+            "minimum": 1900,
+            "maximum": 2100
+          }
+        }
+      }
+    },
+    "awards": {
+      "type": "array",
+      "maxItems": 8,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "kind"
+        ],
+        "properties": {
+          "name": {
+            "$ref": "#/$defs/text",
+            "type": "string",
+            "maxLength": 150
+          },
+          "kind": {
+            "$ref": "vocabularies.json#/$defs/award_kind"
+          },
+          "year": {
+            "type": "integer",
+            "minimum": 1900,
+            "maximum": 2100
+          },
+          "url": {
+            "$ref": "#/$defs/url"
+          }
+        }
+      }
+    },
+    "affiliations": {
+      "type": "array",
+      "maxItems": 8,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "$ref": "#/$defs/text",
+            "type": "string",
+            "maxLength": 150
+          },
+          "role": {
+            "$ref": "#/$defs/text",
+            "type": "string",
+            "maxLength": 100
+          },
+          "url": {
+            "$ref": "#/$defs/url"
+          }
+        }
+      }
+    },
+    "public_works": {
+      "type": "array",
+      "maxItems": 20,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "place"
+        ],
+        "properties": {
+          "title": {
+            "$ref": "#/$defs/text",
+            "type": "string",
+            "maxLength": 150
+          },
+          "place": {
+            "$ref": "#/$defs/text",
+            "type": "string",
+            "maxLength": 150
+          },
+          "year": {
+            "type": "integer",
+            "minimum": 1900,
+            "maximum": 2100
+          },
+          "temporary": {
+            "type": "boolean"
+          },
+          "url": {
+            "$ref": "#/$defs/url"
+          }
+        }
+      }
+    },
+    "news_url": {
+      "$ref": "#/$defs/url"
     }
   },
   "allOf": [

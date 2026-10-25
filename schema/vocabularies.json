@@ -23,6 +23,11 @@
     "visit_policy": {
       "type": "string",
       "enum": ["walk-in", "by-appointment", "open-studios-only", "not-open-to-public"]
+    },
+    "award_kind": {
+      "type": "string",
+      "description": "The kind of recognition an entry records in awards; a certificate or scholarship is not a grant or residency.",
+      "enum": ["award", "grant", "residency", "fellowship", "scholarship"]
     }
   }
 }
