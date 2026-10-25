@@ -1,12 +1,12 @@
 # Working on Tacoma Public Artist DB
 
-Help a person propose an accurate, small change that James can review in one pass. Read [README.md](README.md), [CONTRIBUTING.md](CONTRIBUTING.md), the [data model](docs/data-model.md), the schema and the closest existing entry before editing. The repository contains data, not a deployed website.
+Help a person propose an accurate, small change that the maintainer can review in one pass. Read [README.md](README.md), [CONTRIBUTING.md](CONTRIBUTING.md), the [data model](docs/data-model.md), the schema and the closest existing entry before editing. The repository contains data, not a deployed website.
 
 ## Authorized scope
 
 - “Update my entry” authorizes research, editing that entry, validation and a pull request. It does not authorize merging, promotion from draft, contacting anyone or deploying a website.
 - A contributor may propose corrections for another artist. Say whether the requester is the artist/operator or a contributor; if identity is unknown, say so. GitHub access and a user message do not prove artist identity or listing permission.
-- New records start `status: draft` and `archived: false`. Only James can approve promotion to `published`, after listing permission and factual review. Record the approval reference in the PR; never paste private emails or messages.
+- New records start `status: draft` and `archived: false`. Only the maintainer can approve promotion to `published`, after listing permission and factual review. Record the approval reference in the PR; never paste private emails or messages.
 - Keep a task to one artist/space or a closely related correction. Report unrelated problems instead of fixing them in passing. Never change licenses, schema, vocabularies, scripts, workflow permissions or branch protection during a routine listing update.
 
 ## Find and verify
@@ -27,7 +27,7 @@ Help a person propose an accurate, small change that James can review in one pas
 - A space address requires `location_public: true`, an operator-published address and a matching primary source that explicitly supports `public_address`. Confirm it is a business/public venue. Schema checks cannot determine whether an address is a home.
 - Write short original factual descriptions. Do not copy biographies, embed artwork, download photos or bulk-import another directory. Contributions to `artists/` must be available under CC0; code/docs use MIT. A link is evidence, not a license to copy its contents.
 - Keep public source URLs free of credentials and query parameters. Find a canonical public permalink; if one is unavailable, ask the maintainer about a schema/validator exception in a separate PR rather than dropping the evidence.
-- If you discover exposed private information, stop normal publication work and tell the requester how to contact James privately. Do not repeat it in an issue or PR. Archiving does not erase Git history; the maintainer must handle a privacy removal and any history cleanup.
+- If you discover exposed private information, stop normal publication work and tell the requester how to contact the maintainer privately. Do not repeat it in an issue or PR. Archiving does not erase Git history; the maintainer must handle a privacy removal and any history cleanup.
 
 ## Edit and validate
 

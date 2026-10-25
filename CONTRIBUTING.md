@@ -1,6 +1,6 @@
 # Add or update an entry
 
-You can contribute through GitHub's browser editor or ask a coding agent to do it. Every change is proposed in a pull request and reviewed by James (`@interurban`). Being listed and proposing a correction are free.
+You can contribute through GitHub's browser editor or ask a coding agent to do it. Every change is proposed in a pull request and reviewed by the maintainer. Being listed and proposing a correction are free.
 
 ## Before you start
 
@@ -44,7 +44,7 @@ Also run `npm run validate -- --base origin/main` for a direct checkout, or `--b
 
 Primary sources are the artist's own site, the space operator's site or the responsible public institution's page. Secondary coverage can add context, but published records need primary evidence. A source must explicitly support the fact; attendance at an old studio tour does not establish current opening hours or public access.
 
-`last_verified` means a source check, not artist approval. New seed entries remain draft until James has reviewed the facts and confirmed listing permission with the artist/operator. Evidence of consent can be acknowledged in the PR without publishing the correspondence or private contact information. Self-submissions are reviewed too; do not treat an agent's assertion of identity as proof.
+`last_verified` means a source check, not artist approval. New seed entries remain draft until the maintainer has reviewed the facts and confirmed listing permission with the artist/operator. Evidence of consent can be acknowledged in the PR without publishing the correspondence or private contact information. Self-submissions are reviewed too; do not treat an agent's assertion of identity as proof.
 
 Contribute only data you may dedicate under CC0, and code/docs you may license under MIT. Keep source URLs, but do not copy protected site descriptions or imagery. No images are supported in this first schema. All draft records and review notes are public, including through Git history.
 
@@ -52,10 +52,10 @@ Contribute only data you may dedicate under CC0, and code/docs you may license u
 
 The `Validate data` job checks all entries on PRs and `main` pushes. It uses read-only permissions and does not access secrets or deploy anything. It also compares entries with the PR base to catch deleted/renamed records, demotion of published entries and backwards verification dates. Fix validation errors before asking for merge.
 
-James reviews the sources, rights, neighborhood assignment, address/public-space evidence and any listing permission. Automated checks cannot prove these facts. Only James approves changing `status` from `draft` to `published`. Once published, retirement uses `archived: true`, preserving the identifier and any future URL. Privacy removal is a separate maintainer process, because archiving cannot erase public history.
+The maintainer reviews the sources, rights, neighborhood assignment, address/public-space evidence and any listing permission. Automated checks cannot prove these facts. Only the maintainer approves changing `status` from `draft` to `published`. Once published, retirement uses `archived: true`, preserving the identifier and any future URL. Privacy removal is a separate maintainer process, because archiving cannot erase public history.
 
-`main` branch protection requires an up-to-date `Validate data` check, one approving review, code-owner review and resolved conversations. New commits dismiss stale approvals; force pushes and branch deletion are blocked. `CODEOWNERS` identifies James and takes effect once the foundation PR lands on `main`. The owner retains GitHub's administrator bypass so a single maintainer can handle their own changes; agents must never use that bypass to merge without the owner's explicit authorization. No bot auto-merges are configured. The [setup review](editorial/reviews/2026-10-24-seed-artists.md) records the settings checked on October 24, 2026.
+`main` branch protection requires an up-to-date `Validate data` check, one approving review, code-owner review and resolved conversations. New commits dismiss stale approvals; force pushes and branch deletion are blocked. `CODEOWNERS` identifies the maintainer and takes effect once the foundation PR lands on `main`. The owner retains GitHub's administrator bypass so a single maintainer can handle their own changes; agents must never use that bypass to merge without the owner's explicit authorization. No bot auto-merges are configured. The [setup review](editorial/reviews/2026-10-24-seed-artists.md) records the settings checked on October 24, 2026.
 
 Keep schema, vocabulary and workflow changes separate from ordinary artist updates. New vocabulary terms need a reason and maintainer review. New fields need updated documentation, validation and useful regression tests. Unknown information is a reason to leave a blank, not add a guessed term.
 
-If facts are disputed, explain the discrepancy with public evidence in the PR. If the dispute involves personal information or a sensitive removal request, email James privately instead of opening a public issue. No response-time guarantee is made.
+If facts are disputed, explain the discrepancy with public evidence in the PR. If the dispute involves personal information or a sensitive removal request, email the maintainer privately instead of opening a public issue. No response-time guarantee is made.
