@@ -31,6 +31,15 @@
     "artist-books",
     "workshops"
   ],
+  "practice_name": "Springtide Press",
+  "public_works": [
+    {
+      "title": "You’ll Heal Tacoma",
+      "place": "Stanley Playfield",
+      "year": 2020,
+      "temporary": true
+    }
+  ],
   "sources": [
     {
       "url": "https://springtidepress.com/portfolio/",
@@ -42,7 +51,8 @@
         "mediums",
         "short_bio",
         "other_links",
-        "profile.selected_work"
+        "profile.selected_work",
+        "public_works"
       ],
       "checked_on": "2026-10-24"
     },
@@ -58,7 +68,8 @@
         "visit_policy",
         "other_links",
         "profile.biography",
-        "social_links"
+        "social_links",
+        "practice_name"
       ],
       "checked_on": "2026-10-24"
     }

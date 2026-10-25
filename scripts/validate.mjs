@@ -71,6 +71,21 @@ export function validateEntry(entry, filename, today = pacificToday()) {
   if (entry.public_address && !entry.sources.some(s => s.kind === 'primary' && s.url === entry.public_address.source_url && s.supports.includes('public_address'))) {
     errors.push('/public_address needs a matching primary source supporting public_address');
   }
+  // Practice detail fields describe the artist, not the artist's location or current availability.
+  for (const field of ['practice_name', 'education', 'awards', 'affiliations', 'public_works', 'news_url']) {
+    if (entry[field] !== undefined && !entry.sources.some(s => s.kind === 'primary' && s.supports.includes(field))) errors.push(`/${field} needs primary evidence`);
+  }
+  if (entry.type !== 'artist') {
+    for (const field of ['practice_name', 'education', 'awards', 'public_works']) {
+      if (entry[field] !== undefined) errors.push(`/${field} is only for artist entries`);
+    }
+  }
+  const currentYear = Number(today.slice(0, 4));
+  for (const [field, items] of [['education', entry.education], ['awards', entry.awards], ['public_works', entry.public_works]]) {
+    for (const [index, item] of (items ?? []).entries()) {
+      if (item.year !== undefined && item.year > currentYear) errors.push(`/${field}/${index}/year cannot be in the future`);
+    }
+  }
   return errors;
 }
 

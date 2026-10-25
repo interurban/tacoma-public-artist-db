@@ -46,6 +46,13 @@ Use field names where possible. `Tacoma connection` is also a useful claim when 
 | `studio_tour_years` | Unique integer years supported by edition-specific evidence. An empty/omitted list makes no participation claim. |
 | `space_slugs` | Artist-only references to separate studio/gallery/space records. Every referenced space must exist. |
 | `public_address` | Public-space address object, described below. Never on an artist record. |
+| `profile` | Optional artist detail object described below. |
+| `practice_name` | Artist-only public practice or studio name, such as a press, label or design business, when it differs from `name`. Record it only when the artist publishes it; this is not an alias list or a legal name. |
+| `education` | Up to six `{institution, credential?, year?}` facts stated by the artist or the institution. Omit a school nobody publishes; never infer a degree from a biography. |
+| `awards` | Up to eight `{name, kind, year?, url?}` objects. `kind` is `award`, `grant`, `residency`, `fellowship` or `scholarship`. Record recognition the artist or awarding body publishes; do not convert a press mention or a nomination into an award. |
+| `affiliations` | Up to eight `{name, role?, url?}` stated relationships, such as representation, a collective or a teaching post. Include `role` only when the source states it. |
+| `public_works` | Up to twenty `{title, place, year?, temporary?, url?}` publicly sited works. `place` is the public site or named public area the source gives, not the artist's studio, and never establishes an artist location. Mark a non-permanent, ended or one-time installation `temporary: true`; consumers must not present a temporary or past work as currently on view. |
+| `news_url` | A link to the artist's own news or blog page. Use it instead of storing upcoming shows, current hours or availability as facts. |
 | `$schema` | Optional editor hint, exactly `../schema/entry.schema.json`. |
 
 Unknown optional fields are omitted, not invented or filled with “unknown.” Additional properties are rejected, including unsupported address, phone, email, coordinate and image fields. This restriction does not detect a private fact pasted into free text: contributors and reviewers must inspect the whole record.
@@ -55,6 +62,16 @@ Unknown optional fields are omitted, not invented or filled with “unknown.” 
 The optional `profile` object supplies richer factual text for an artist's permanent detail page, while `short_bio` remains the brief listing summary. It has `biography` (1–6 original plain-text paragraphs, at most 1,000 characters each), `updated_at` (the actual ISO editorial revision date), and optional `selected_work` (up to eight objects with `title`, `summary`, `url`, and an optional integer `year`). Work titles are at most 150 characters and summaries at most 500. Limits are safeguards, not recommended word counts. No HTML, image copying, made-up awards or keyword padding is allowed.
 
 At least one primary source must explicitly support `profile.biography`. Every selected-work URL must also appear as a primary source with `profile.selected_work` in `supports`. A year is optional: omit it when sources conflict rather than merging completion, catalog and dedication dates. Source checks stay in `checked_on` / `last_verified`; `profile.updated_at` records real editorial changes and must not be advanced by syncs. This is an additive version-1 field; existing entries remain valid without it. Website consumers can keep basic profiles out of search indexing until the richer sourced biography exists. Retired published identifiers must retain their detail URL.
+
+## Practice, recognition and public work
+
+`practice_name`, `education`, `awards`, `affiliations`, `public_works` and `news_url` are additive version-1 fields that describe a practice rather than a location or current availability. They are optional; an entry is valid without any of them. `practice_name`, `education`, `awards` and `public_works` are artist-only. `affiliations` and `news_url` also apply to space records.
+
+At least one `sources` item must be primary and name the field in `supports`. Years use the calendar year the source states and cannot be in the future; when a source gives a range (`2021–2022`) or two sources disagree, omit `year` instead of choosing one. Prefer the artist's own pages and institutional or awarding-body pages over directory roundups and press coverage.
+
+A `public_works.place` names the artwork's public site or area, such as a plaza, library, park or named neighborhood. It is evidence about the artwork, never about where the artist lives or works: do not copy studio or home addresses, coordinates or a map pin from a project page. A work that was temporary, ended or happened once carries `temporary: true`, and its title, place and year record history, not something a visitor can go see.
+
+These facts stay stable for years, which suits the re-check model. Do not store volatile information such as an upcoming exhibition list, current prices, availability or class dates in any of these fields; link the artist's `news_url` instead. Education, awards and affiliations the artist does not publish stay absent rather than being inferred from interviews or other directories.
 
 ## Artists, spaces and location privacy
 
