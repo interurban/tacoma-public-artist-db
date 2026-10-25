@@ -16,7 +16,7 @@ Name the entry and fields you changed. State whether you are the artist/operator
 - [ ] Existing slugs/filenames stay stable; retired records use archived: true.
 - [ ] I can contribute the data under CC0 and code/docs under MIT.
 - [ ] npm ci --ignore-scripts and npm run verify passed (or explain what could not run).
-- [ ] New entries remain draft unless James explicitly approved promotion; artist listing permission is recorded without private messages.
+- [ ] New entries remain draft unless the maintainer explicitly approved promotion; artist listing permission is recorded without private messages.
 
 ## Unknowns and maintainer decisions
 

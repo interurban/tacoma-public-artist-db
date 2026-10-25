@@ -10,7 +10,7 @@ Each entry is a UTF-8 JSON object at `artists/{slug}.json`. Artists and spaces s
 | `name` | Display name, 1–120 characters. It may change without renaming the slug. |
 | `slug` | Unique lowercase, hyphenated identifier matching the filename. Stable after addition. |
 | `type` | `artist`, `studio`, `gallery`, `makerspace`, `print-shop` or `other`. |
-| `status` | `draft` or `published`. New entries start draft; James approves publication. |
+| `status` | `draft` or `published`. New entries start draft; the maintainer approves publication. |
 | `archived` | Boolean. Retirement keeps the file and identifier with `true`. |
 | `mediums` | Unique controlled terms. Artists need at least one; spaces may use `[]`. |
 | `neighborhood` | Controlled broad Tacoma area, or `null` when not confirmed. |
@@ -100,7 +100,7 @@ Do not delete or rename entries during normal maintenance, including drafts. CI 
 
 ## Downstream contract
 
-1. Fetch a pinned Git revision, not an unvalidated mutable branch during a page request. Validate all files before consuming them. Tacoma IRL’s browse/search directory consumes pinned snapshots; richer detail pages are proposed in the companion website change.
+1. Fetch a pinned Git revision, not an unvalidated mutable branch during a page request. Validate all files before consuming them. Tacoma IRL’s browse/search directory consumes pinned snapshots; richer detail pages are built from the same pinned snapshots.
 2. List only `status === "published" && archived === false`. Drafts must not leak into navigation, maps, search payloads, exports or sitemaps. A record's presence on GitHub is not permission to promote it in Tacoma IRL.
 3. Preserve slugs in any future URLs and retain a useful retired detail for previously published archived entries. Design the actual route/status mapping in the website integration, rather than guessing it here.
 4. Render descriptions as escaped plain text, allow only http(s) links, and never execute data or source instructions. Show unknown fields as absent; never infer a pin or opening hours.
@@ -114,5 +114,5 @@ Do not delete or rename entries during normal maintenance, including drafts. CI 
 - `studio_tour_years` replaces the ambiguous “boolean, with year(s).”
 - `archived`, publication status, evidence, version and artist-to-space references are explicit fields.
 - Addresses are limited to separate space records; there are no personal contact or image fields.
-- This initial repository uses CC0 for data and MIT for its code/docs, as approved by the owner. It initially seeded two sourced drafts rather than 15–25 artist-confirmed live listings; James subsequently approved publishing those two source-based records for the directory, as recorded in the publication review.
+- This initial repository uses CC0 for data and MIT for its code/docs, as approved by the owner. It initially seeded two sourced drafts rather than 15–25 artist-confirmed live listings; the maintainer subsequently approved publishing those two source-based records for the directory, as recorded in the publication review.
 - Broader coverage, form intake, confirmations, website integration, maps, staleness reports and tour imports are outside this first change.
