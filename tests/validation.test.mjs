@@ -88,6 +88,18 @@ test('links reject executable schemes, credentials, private hosts and query stri
   }
 });
 
+test('social links require primary evidence and cannot duplicate legacy Instagram URLs', () => {
+  const social_links = [{ label: 'Instagram', url: 'https://instagram.com/synthetic-artist/' }];
+  const entry = changed({ social_links });
+  assert.ok(errors(entry).some(e => e.includes('social_links needs primary evidence')));
+  entry.sources[0].supports.push('social_links');
+  assert.deepEqual(errors(entry), []);
+  const tooMany = Array.from({ length: 13 }, (_, i) => ({ label: `Social ${i}`, url: `https://example.org/${i}` }));
+  assert.ok(errors(changed({ social_links: tooMany })).some(e => e.includes('12 items')));
+  assert.ok(errors(changed({ social_links, instagram: 'https://instagram.com/synthetic-artist', sources: [{ ...seed.sources[0], supports: ['social_links'] }] })).some(e => e.includes('must not duplicate')));
+  assert.ok(errors(changed({ social_links: [{ label: 'Instagram', url: 'https://instagram.com/synthetic-artist/?query=bad' }] })).length > 0);
+});
+
 test('published entries need primary evidence', () => {
   const entry = changed({ status: 'published' });
   entry.sources.forEach(source => { source.kind = 'secondary'; });

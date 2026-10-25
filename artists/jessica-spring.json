@@ -57,7 +57,8 @@
         "focus_tags",
         "visit_policy",
         "other_links",
-        "profile.biography"
+        "profile.biography",
+        "social_links"
       ],
       "checked_on": "2026-10-24"
     }
@@ -82,5 +83,15 @@
         "url": "https://springtidepress.com/portfolio/"
       }
     ]
-  }
+  },
+  "social_links": [
+    {
+      "label": "Instagram",
+      "url": "https://instagram.com/springtidepress/"
+    },
+    {
+      "label": "Tumblr",
+      "url": "https://springtidepress.tumblr.com/"
+    }
+  ]
 }
