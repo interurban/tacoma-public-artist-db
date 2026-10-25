@@ -23,6 +23,8 @@
   "studio_tour_years": [
     2026
   ],
+  "short_bio": "David Jacobs is a Pacific Northwest photographer working in landscape, infrared and black-and-white, with prints and environmental portraits made around the region.",
+  "news_url": "https://www.david-jacobs-photography.com/fieldnotes",
   "sources": [
     {
       "url": "https://experience.arcgis.com/experience/e0352e9b15244722b4695c7cfcf0a8c4/",
@@ -37,6 +39,33 @@
         "social_links"
       ],
       "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://www.david-jacobs-photography.com/",
+      "label": "David Jacobs Photography: home",
+      "kind": "primary",
+      "supports": [
+        "short_bio",
+        "profile.biography"
+      ],
+      "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://www.david-jacobs-photography.com/fieldnotes",
+      "label": "David Jacobs Photography: Field Notes",
+      "kind": "primary",
+      "supports": [
+        "news_url",
+        "profile.biography"
+      ],
+      "checked_on": "2026-10-24"
     }
-  ]
+  ],
+  "profile": {
+    "biography": [
+      "David Jacobs photographs the Pacific Northwest, working in landscape, infrared, black and white, and color. He describes the work as an attempt to catch the textures, moods and stories that shape a place.",
+      "He has been shooting infrared since 2023 with a converted camera, a process he writes about in his Field Notes, and also makes environmental portraits in which the setting carries part of the story."
+    ],
+    "updated_at": "2026-10-24"
+  }
 }

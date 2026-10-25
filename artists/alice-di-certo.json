@@ -18,6 +18,22 @@
   "studio_tour_years": [
     2026
   ],
+  "short_bio": "Alice Di Certo is a photographer and sculptor in Tacoma whose work looks at people, place and the environment; she teaches at Tacoma Community College.",
+  "education": [
+    {
+      "institution": "Ca' Foscari University, Venice"
+    },
+    {
+      "institution": "Georgia State University",
+      "credential": "MA, Art History"
+    }
+  ],
+  "affiliations": [
+    {
+      "name": "Tacoma Community College",
+      "role": "Adjunct faculty and studio technician"
+    }
+  ],
   "sources": [
     {
       "url": "https://experience.arcgis.com/experience/e0352e9b15244722b4695c7cfcf0a8c4/",
@@ -31,6 +47,26 @@
         "website"
       ],
       "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://alicedicerto.weebly.com/about.html",
+      "label": "Alice Di Certo: about",
+      "kind": "primary",
+      "supports": [
+        "short_bio",
+        "profile.biography",
+        "education",
+        "affiliations",
+        "Tacoma connection"
+      ],
+      "checked_on": "2026-10-24"
     }
-  ]
+  ],
+  "profile": {
+    "biography": [
+      "Alice Di Certo works in photography and sculpture, with an interest in how people relate to their surroundings. Her series include portraits of immigrants and refugees, and work on skin and heritage.",
+      "Born in Italy, she studied at Ca' Foscari University in Venice and lived in Graz and Dublin before moving to the United States. She holds a master's in art history and studied photography at Georgia State University, and now teaches at Tacoma Community College, where she is also the studio technician for photography and sculpture."
+    ],
+    "updated_at": "2026-10-24"
+  }
 }

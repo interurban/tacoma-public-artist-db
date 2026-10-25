@@ -24,6 +24,25 @@
   "studio_tour_years": [
     2026
   ],
+  "short_bio": "Cass Graybeal Brown is an illustrator, painter and tattoo artist whose work draws on natural history and scientific illustration.",
+  "practice_name": "Graybeal Illustrations",
+  "education": [
+    {
+      "institution": "Savannah College of Art and Design",
+      "credential": "BFA, Illustration; minor in Scientific Illustration",
+      "year": 2017
+    }
+  ],
+  "affiliations": [
+    {
+      "name": "Copper Wolf Tattoo and Fine Art Gallery",
+      "role": "Tattoo artist and exhibiting artist"
+    },
+    {
+      "name": "Proctor Art Gallery",
+      "role": "Artist member"
+    }
+  ],
   "sources": [
     {
       "url": "https://experience.arcgis.com/experience/e0352e9b15244722b4695c7cfcf0a8c4/",
@@ -38,6 +57,26 @@
         "social_links"
       ],
       "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://www.grayillu.com/contact",
+      "label": "Graybeal Illustrations: about me",
+      "kind": "primary",
+      "supports": [
+        "practice_name",
+        "short_bio",
+        "profile.biography",
+        "education",
+        "affiliations"
+      ],
+      "checked_on": "2026-10-24"
     }
-  ]
+  ],
+  "profile": {
+    "biography": [
+      "Cass Graybeal Brown works as an illustrator, painter and tattoo artist under the name Graybeal Illustrations. Her subjects come from nature and scientific illustration — plants, animals and the patterns between them.",
+      "She studied illustration at Savannah College of Art and Design, graduating in 2017 with a scientific illustration minor, and has worked as a tattoo artist at Copper Wolf Tattoo and Fine Art Gallery since 2022. She exhibits with the gallery and is an artist member of Proctor Art Gallery."
+    ],
+    "updated_at": "2026-10-24"
+  }
 }

@@ -19,6 +19,7 @@
   "studio_tour_years": [
     2026
   ],
+  "short_bio": "Kyle Dillehay is a sculptor, installation artist and photographer working in stone, cast iron and wet-plate collodion.",
   "sources": [
     {
       "url": "https://experience.arcgis.com/experience/e0352e9b15244722b4695c7cfcf0a8c4/",
@@ -32,6 +33,23 @@
         "website"
       ],
       "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://kyledillehay.com/bio",
+      "label": "Kyle Dillehay: bio",
+      "kind": "primary",
+      "supports": [
+        "short_bio",
+        "profile.biography"
+      ],
+      "checked_on": "2026-10-24"
     }
-  ]
+  ],
+  "profile": {
+    "biography": [
+      "Kyle Dillehay makes sculpture and installations and photographs with wet-plate collodion, a 19th-century process. His work returns to the built environment and its effect on land, from Anasazi stone architecture in the American Southwest to the trulli of Puglia in southern Italy.",
+      "Born near Chicago and raised in northern Alabama, he began travelling and photographing in the 1980s, including projects in Panama and Nicaragua, and has since shown sculpture, installation and photography."
+    ],
+    "updated_at": "2026-10-24"
+  }
 }

@@ -23,6 +23,8 @@
   "studio_tour_years": [
     2026
   ],
+  "short_bio": "Alexandra Cespedes makes handmade ceramic pots for tea and daily use at AleClayLab, her Tacoma studio.",
+  "practice_name": "AleClayLab",
   "sources": [
     {
       "url": "https://experience.arcgis.com/experience/e0352e9b15244722b4695c7cfcf0a8c4/",
@@ -37,6 +39,24 @@
         "social_links"
       ],
       "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://aleclaylab.com/about",
+      "label": "AleClayLab: about",
+      "kind": "primary",
+      "supports": [
+        "practice_name",
+        "short_bio",
+        "profile.biography"
+      ],
+      "checked_on": "2026-10-24"
     }
-  ]
+  ],
+  "profile": {
+    "biography": [
+      "Alexandra Cespedes is the potter behind AleClayLab in Tacoma. She makes one-off vessels and tableware meant to be used — cups, teapots and serving pieces shaped around the rituals of tea.",
+      "Her ceramics began with a year of study in her hometown of Bogotá, Colombia. After another career she returned to clay, built a home studio and apprenticed with a studio potter. She now teaches classes alongside her own work."
+    ],
+    "updated_at": "2026-10-24"
+  }
 }

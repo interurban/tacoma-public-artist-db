@@ -17,6 +17,13 @@
   "studio_tour_years": [
     2026
   ],
+  "short_bio": "Mark Hudak is a potter and the co-owner of Throwing Mud Gallery in Tacoma, making functional ceramics for daily use.",
+  "affiliations": [
+    {
+      "name": "Throwing Mud Gallery",
+      "role": "Co-owner and potter"
+    }
+  ],
   "sources": [
     {
       "url": "https://experience.arcgis.com/experience/e0352e9b15244722b4695c7cfcf0a8c4/",
@@ -30,6 +37,25 @@
         "website"
       ],
       "checked_on": "2026-10-24"
+    },
+    {
+      "url": "https://throwingmudgallery.com/meet-us/",
+      "label": "Throwing Mud Gallery: meet us",
+      "kind": "primary",
+      "supports": [
+        "short_bio",
+        "profile.biography",
+        "affiliations",
+        "Tacoma connection"
+      ],
+      "checked_on": "2026-10-24"
     }
-  ]
+  ],
+  "profile": {
+    "biography": [
+      "Mark Hudak is a potter and co-owner of Throwing Mud Gallery, the Tacoma gallery and pottery studio he opened with Eileen Hudak in 2011. He came to pottery through a required college class and was hooked at the wheel.",
+      "He moved to Tacoma from Chicago in 1977 to teach, and pottery became his full-time work. He makes functional pieces meant to be used, first selling at Northwest fairs and galleries and now from the shop."
+    ],
+    "updated_at": "2026-10-24"
+  }
 }
